@@ -13,6 +13,7 @@
 		7612FA712C8C09FC0025BEF8 /* CoinTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7612FA702C8C09FC0025BEF8 /* CoinTable.swift */; };
 		7612FA742C8C0A380025BEF8 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7612FA732C8C0A380025BEF8 /* RealmSwift */; };
 		7612FA762C8C0B2C0025BEF8 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7612FA752C8C0B2C0025BEF8 /* RealmManager.swift */; };
+		7612FA782C8C12DB0025BEF8 /* DetailCoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7612FA772C8C12DB0025BEF8 /* DetailCoinModel.swift */; };
 		76F537BB2C8AC54E000E29DA /* CheckCoinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F537BA2C8AC54E000E29DA /* CheckCoinApp.swift */; };
 		76F537BD2C8AC54E000E29DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F537BC2C8AC54E000E29DA /* ContentView.swift */; };
 		76F537BF2C8AC54F000E29DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F537BE2C8AC54F000E29DA /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		7612FA6D2C8BFA050025BEF8 /* TextWithColoredSubstring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWithColoredSubstring.swift; sourceTree = "<group>"; };
 		7612FA702C8C09FC0025BEF8 /* CoinTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTable.swift; sourceTree = "<group>"; };
 		7612FA752C8C0B2C0025BEF8 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		7612FA772C8C12DB0025BEF8 /* DetailCoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoinModel.swift; sourceTree = "<group>"; };
 		76F537B72C8AC54E000E29DA /* CheckCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76F537BA2C8AC54E000E29DA /* CheckCoinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCoinApp.swift; sourceTree = "<group>"; };
 		76F537BC2C8AC54E000E29DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,21 @@
 				7612FA752C8C0B2C0025BEF8 /* RealmManager.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		7612FA792C8C138D0025BEF8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7612FA7A2C8C13950025BEF8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76F537D12C8AC6CF000E29DA /* FavoriteView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		76F537AE2C8AC54E000E29DA = {
@@ -165,7 +182,8 @@
 		76F537D02C8AC6C4000E29DA /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
-				76F537D12C8AC6CF000E29DA /* FavoriteView.swift */,
+				7612FA792C8C138D0025BEF8 /* Model */,
+				7612FA7A2C8C13950025BEF8 /* View */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -193,6 +211,7 @@
 			children = (
 				76F537D82C8AD66B000E29DA /* TrendingModel.swift */,
 				7612FA662C8BF0C20025BEF8 /* SearchModel.swift */,
+				7612FA772C8C12DB0025BEF8 /* DetailCoinModel.swift */,
 			);
 			path = ResponseModel;
 			sourceTree = "<group>";
@@ -298,6 +317,7 @@
 				76F537E52C8AE25A000E29DA /* CoinModel.swift in Sources */,
 				76F537E12C8AD84F000E29DA /* APIManager.swift in Sources */,
 				76F537CF2C8AC6C1000E29DA /* SearchView.swift in Sources */,
+				7612FA782C8C12DB0025BEF8 /* DetailCoinModel.swift in Sources */,
 				7612FA6E2C8BFA050025BEF8 /* TextWithColoredSubstring.swift in Sources */,
 				7612FA672C8BF0C20025BEF8 /* SearchModel.swift in Sources */,
 				76F537CC2C8AC653000E29DA /* TrendingView.swift in Sources */,

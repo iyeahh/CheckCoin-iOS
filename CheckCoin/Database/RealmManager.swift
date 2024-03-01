@@ -17,8 +17,9 @@ final class RealmManager {
 
     let realm = try! Realm()
 
-    func fetchList() {
+    func fetchList() -> [CoinTable] {
         coinList = realm.objects(CoinTable.self)
+        return Array(coinList)
     }
 
     func addIsLike(coinId: String, image: String, name: String, symbol: String) {

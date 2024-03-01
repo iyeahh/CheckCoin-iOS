@@ -11,24 +11,61 @@ import Kingfisher
 struct TrendingView: View {
     @State var coinList: [CoinModel] = []
     @State var nftList: [NFTModel] = []
+    @State var favoriteCoinList: [DetailCoinModel] = []
 
     var body: some View {
         NavigationView {
             VStack {
                 ScrollView {
-                    myfavoriteHStack(image: URL(string: "https://coin-images.coingecko.com/coins/images/39760/standard/photo_2024-08-16_17.29.08.png?1723903486"), name: "안녕", symbol: "안녕", price: "39393", priceChange: "393")
-                    topCoinScrollView(title: "Top 15 Coin", coin: coinList)
-                    topNFTScrollView(title: "Top 7 NFT", nft: nftList)
-                    Spacer()
-                    bottomBar()
+
+                    VStack {
+                        sectionTitle("My Favorite")
+                        ScrollView(.horizontal) {
+                            HStack {
+                                ForEach(favoriteCoinList, id: \.id) { item in
+                                    myfavorite(
+                                        image: URL(string: item.image!),
+                                        name: item.name!,
+                                        symbol: item.symbol!,
+                                        price: "\(item.current_price!)",
+                                        priceChange: "\(item.price_change_percentage_24h!)"
+                                    )
+                                }
+                            }
+                            .padding(.leading, 20)
+                        }
+
+                        topCoinScrollView(title: "Top 15 Coin", coin: coinList)
+                        topNFTScrollView(title: "Top 7 NFT", nft: nftList)
+                        Spacer()
+                        bottomBar()
+                    }
                 }
+            }
+            .task {
+                await loadCoinData()
+                fetchFavoriteCoin()
             }
             .navigationTitle("Check Coin")
         }
-        .task {
-            await loadCoinData()
-        }
     }
+
+
+    private func fetchFavoriteCoin() {
+        let coinList = RealmManager.shared.fetchList()
+
+        typealias detailCoinModelList = [DetailCoinModel]
+
+        coinList.forEach ({ item in
+            print(APIKey.detailCoinURL + item.coinId)
+            APIManager.shared.fetchData(url: APIKey.detailCoinURL + item.coinId) { (value: detailCoinModelList) -> Void in
+                DispatchQueue.main.async {
+                    favoriteCoinList.append(value.first!)
+                }
+            }
+        })
+    }
+
 
     // 데이터를 가져오는 작업을 함수로 분리
     private func loadCoinData() async {
@@ -170,9 +207,7 @@ struct TrendingView: View {
             sectionTitle("My Favorite")
             ScrollView(.horizontal) {
                 HStack(spacing: 20) {
-                    ForEach(0..<5) { _ in
                         myfavorite(image: image, name: name, symbol: symbol, price: price, priceChange: priceChange)
-                    }
                 }
                 .padding(.leading, 20)
             }

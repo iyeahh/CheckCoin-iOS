@@ -19,8 +19,9 @@ final class APIManager {
                 switch response.result {
                 case .success(let value):
                     completion(value)
-                case .failure:
+                case .failure(let error):
                     print("코인 정보 가져오기 실패")
+                    print(error)
                 }
             }
     }
