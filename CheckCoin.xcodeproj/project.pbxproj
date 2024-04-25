@@ -12,6 +12,10 @@
 		76F537BF2C8AC54F000E29DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F537BE2C8AC54F000E29DA /* Assets.xcassets */; };
 		76F537C22C8AC54F000E29DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F537C12C8AC54F000E29DA /* Preview Assets.xcassets */; };
 		76F537C92C8AC5B2000E29DA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 76F537C82C8AC5B2000E29DA /* .gitignore */; };
+		76F537CC2C8AC653000E29DA /* TrendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F537CB2C8AC653000E29DA /* TrendingView.swift */; };
+		76F537CF2C8AC6C1000E29DA /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F537CE2C8AC6C1000E29DA /* SearchView.swift */; };
+		76F537D22C8AC6CF000E29DA /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F537D12C8AC6CF000E29DA /* FavoriteView.swift */; };
+		76F537D52C8AC6E1000E29DA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F537D42C8AC6E1000E29DA /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,10 @@
 		76F537BE2C8AC54F000E29DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76F537C12C8AC54F000E29DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		76F537C82C8AC5B2000E29DA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		76F537CB2C8AC653000E29DA /* TrendingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingView.swift; sourceTree = "<group>"; };
+		76F537CE2C8AC6C1000E29DA /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		76F537D12C8AC6CF000E29DA /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		76F537D42C8AC6E1000E29DA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,10 @@
 		76F537B92C8AC54E000E29DA /* CheckCoin */ = {
 			isa = PBXGroup;
 			children = (
+				76F537CA2C8AC644000E29DA /* Trending */,
+				76F537CD2C8AC6B6000E29DA /* Search */,
+				76F537D02C8AC6C4000E29DA /* Favorite */,
+				76F537D32C8AC6D8000E29DA /* Profile */,
 				76F537BA2C8AC54E000E29DA /* CheckCoinApp.swift */,
 				76F537BC2C8AC54E000E29DA /* ContentView.swift */,
 				76F537BE2C8AC54F000E29DA /* Assets.xcassets */,
@@ -68,6 +80,38 @@
 				76F537C12C8AC54F000E29DA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		76F537CA2C8AC644000E29DA /* Trending */ = {
+			isa = PBXGroup;
+			children = (
+				76F537CB2C8AC653000E29DA /* TrendingView.swift */,
+			);
+			path = Trending;
+			sourceTree = "<group>";
+		};
+		76F537CD2C8AC6B6000E29DA /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				76F537CE2C8AC6C1000E29DA /* SearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		76F537D02C8AC6C4000E29DA /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				76F537D12C8AC6CF000E29DA /* FavoriteView.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		76F537D32C8AC6D8000E29DA /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				76F537D42C8AC6E1000E29DA /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +185,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76F537CF2C8AC6C1000E29DA /* SearchView.swift in Sources */,
+				76F537CC2C8AC653000E29DA /* TrendingView.swift in Sources */,
 				76F537BD2C8AC54E000E29DA /* ContentView.swift in Sources */,
+				76F537D22C8AC6CF000E29DA /* FavoriteView.swift in Sources */,
+				76F537D52C8AC6E1000E29DA /* ProfileView.swift in Sources */,
 				76F537BB2C8AC54E000E29DA /* CheckCoinApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
