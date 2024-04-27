@@ -16,6 +16,13 @@
 		76F537CF2C8AC6C1000E29DA /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F537CE2C8AC6C1000E29DA /* SearchView.swift */; };
 		76F537D22C8AC6CF000E29DA /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F537D12C8AC6CF000E29DA /* FavoriteView.swift */; };
 		76F537D52C8AC6E1000E29DA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F537D42C8AC6E1000E29DA /* ProfileView.swift */; };
+		76F537D92C8AD66B000E29DA /* TrendingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F537D82C8AD66B000E29DA /* TrendingModel.swift */; };
+		76F537DC2C8AD83A000E29DA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 76F537DB2C8AD83A000E29DA /* Alamofire */; };
+		76F537DF2C8AD842000E29DA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 76F537DE2C8AD842000E29DA /* Kingfisher */; };
+		76F537E12C8AD84F000E29DA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F537E02C8AD84F000E29DA /* APIManager.swift */; };
+		76F537E32C8AD891000E29DA /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F537E22C8AD891000E29DA /* APIKey.swift */; };
+		76F537E52C8AE25A000E29DA /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F537E42C8AE25A000E29DA /* CoinModel.swift */; };
+		76F537E82C8AE26A000E29DA /* NFTModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F537E72C8AE26A000E29DA /* NFTModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +36,11 @@
 		76F537CE2C8AC6C1000E29DA /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		76F537D12C8AC6CF000E29DA /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		76F537D42C8AC6E1000E29DA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		76F537D82C8AD66B000E29DA /* TrendingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingModel.swift; sourceTree = "<group>"; };
+		76F537E02C8AD84F000E29DA /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		76F537E22C8AD891000E29DA /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		76F537E42C8AE25A000E29DA /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		76F537E72C8AE26A000E29DA /* NFTModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76F537DF2C8AD842000E29DA /* Kingfisher in Frameworks */,
+				76F537DC2C8AD83A000E29DA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +76,7 @@
 		76F537B92C8AC54E000E29DA /* CheckCoin */ = {
 			isa = PBXGroup;
 			children = (
+				76F537D62C8AD64A000E29DA /* API */,
 				76F537CA2C8AC644000E29DA /* Trending */,
 				76F537CD2C8AC6B6000E29DA /* Search */,
 				76F537D02C8AC6C4000E29DA /* Favorite */,
@@ -85,7 +100,8 @@
 		76F537CA2C8AC644000E29DA /* Trending */ = {
 			isa = PBXGroup;
 			children = (
-				76F537CB2C8AC653000E29DA /* TrendingView.swift */,
+				76F537E62C8AE262000E29DA /* Model */,
+				76F537E92C8AE3A7000E29DA /* View */,
 			);
 			path = Trending;
 			sourceTree = "<group>";
@@ -114,6 +130,41 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		76F537D62C8AD64A000E29DA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				76F537E22C8AD891000E29DA /* APIKey.swift */,
+				76F537E02C8AD84F000E29DA /* APIManager.swift */,
+				76F537D72C8AD658000E29DA /* ResponseModel */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		76F537D72C8AD658000E29DA /* ResponseModel */ = {
+			isa = PBXGroup;
+			children = (
+				76F537D82C8AD66B000E29DA /* TrendingModel.swift */,
+			);
+			path = ResponseModel;
+			sourceTree = "<group>";
+		};
+		76F537E62C8AE262000E29DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				76F537E42C8AE25A000E29DA /* CoinModel.swift */,
+				76F537E72C8AE26A000E29DA /* NFTModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		76F537E92C8AE3A7000E29DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76F537CB2C8AC653000E29DA /* TrendingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,6 +181,10 @@
 			dependencies = (
 			);
 			name = CheckCoin;
+			packageProductDependencies = (
+				76F537DB2C8AD83A000E29DA /* Alamofire */,
+				76F537DE2C8AD842000E29DA /* Kingfisher */,
+			);
 			productName = CheckCoin;
 			productReference = 76F537B72C8AC54E000E29DA /* CheckCoin.app */;
 			productType = "com.apple.product-type.application";
@@ -158,6 +213,10 @@
 				Base,
 			);
 			mainGroup = 76F537AE2C8AC54E000E29DA;
+			packageReferences = (
+				76F537DA2C8AD83A000E29DA /* XCRemoteSwiftPackageReference "Alamofire" */,
+				76F537DD2C8AD842000E29DA /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 76F537B82C8AC54E000E29DA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -185,11 +244,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76F537E52C8AE25A000E29DA /* CoinModel.swift in Sources */,
+				76F537E12C8AD84F000E29DA /* APIManager.swift in Sources */,
 				76F537CF2C8AC6C1000E29DA /* SearchView.swift in Sources */,
 				76F537CC2C8AC653000E29DA /* TrendingView.swift in Sources */,
 				76F537BD2C8AC54E000E29DA /* ContentView.swift in Sources */,
+				76F537E82C8AE26A000E29DA /* NFTModel.swift in Sources */,
 				76F537D22C8AC6CF000E29DA /* FavoriteView.swift in Sources */,
 				76F537D52C8AC6E1000E29DA /* ProfileView.swift in Sources */,
+				76F537D92C8AD66B000E29DA /* TrendingModel.swift in Sources */,
+				76F537E32C8AD891000E29DA /* APIKey.swift in Sources */,
 				76F537BB2C8AC54E000E29DA /* CheckCoinApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +470,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		76F537DA2C8AD83A000E29DA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		76F537DD2C8AD842000E29DA /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		76F537DB2C8AD83A000E29DA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 76F537DA2C8AD83A000E29DA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		76F537DE2C8AD842000E29DA /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 76F537DD2C8AD842000E29DA /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 76F537AF2C8AC54E000E29DA /* Project object */;
 }
