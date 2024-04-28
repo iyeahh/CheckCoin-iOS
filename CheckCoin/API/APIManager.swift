@@ -13,9 +13,9 @@ final class APIManager {
 
     private init() { }
 
-    func fetchTrending(completion: @escaping (TrendingModel) -> Void) {
-        AF.request(APIKey.trendingURL)
-            .responseDecodable(of: TrendingModel.self) { response in
+    func fetchData<T: Decodable>(url: String, completion: @escaping (T) -> Void) {
+        AF.request(url)
+            .responseDecodable(of: T.self) { response in
                 switch response.result {
                 case .success(let value):
                     completion(value)

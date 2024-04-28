@@ -32,7 +32,7 @@ struct TrendingView: View {
 
     // 데이터를 가져오는 작업을 함수로 분리
     private func loadCoinData() async {
-        APIManager.shared.fetchTrending { value in
+        APIManager.shared.fetchData(url: APIKey.trendingURL) { (value: TrendingModel) -> Void in
             // 코인 데이터를 처리
             if let coin = value.coins,
                let nft = value.nfts {

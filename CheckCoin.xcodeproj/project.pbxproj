@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7612FA672C8BF0C20025BEF8 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7612FA662C8BF0C20025BEF8 /* SearchModel.swift */; };
+		7612FA6B2C8BF7CE0025BEF8 /* SearchCoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7612FA6A2C8BF7CE0025BEF8 /* SearchCoinModel.swift */; };
+		7612FA6E2C8BFA050025BEF8 /* TextWithColoredSubstring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7612FA6D2C8BFA050025BEF8 /* TextWithColoredSubstring.swift */; };
 		76F537BB2C8AC54E000E29DA /* CheckCoinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F537BA2C8AC54E000E29DA /* CheckCoinApp.swift */; };
 		76F537BD2C8AC54E000E29DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F537BC2C8AC54E000E29DA /* ContentView.swift */; };
 		76F537BF2C8AC54F000E29DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F537BE2C8AC54F000E29DA /* Assets.xcassets */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7612FA662C8BF0C20025BEF8 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		7612FA6A2C8BF7CE0025BEF8 /* SearchCoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoinModel.swift; sourceTree = "<group>"; };
+		7612FA6D2C8BFA050025BEF8 /* TextWithColoredSubstring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWithColoredSubstring.swift; sourceTree = "<group>"; };
 		76F537B72C8AC54E000E29DA /* CheckCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76F537BA2C8AC54E000E29DA /* CheckCoinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCoinApp.swift; sourceTree = "<group>"; };
 		76F537BC2C8AC54E000E29DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +62,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7612FA682C8BF7B30025BEF8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7612FA6A2C8BF7CE0025BEF8 /* SearchCoinModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7612FA692C8BF7BA0025BEF8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76F537CE2C8AC6C1000E29DA /* SearchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7612FA6C2C8BF9EC0025BEF8 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7612FA6D2C8BFA050025BEF8 /* TextWithColoredSubstring.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		76F537AE2C8AC54E000E29DA = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +106,7 @@
 		76F537B92C8AC54E000E29DA /* CheckCoin */ = {
 			isa = PBXGroup;
 			children = (
+				7612FA6C2C8BF9EC0025BEF8 /* Helper */,
 				76F537D62C8AD64A000E29DA /* API */,
 				76F537CA2C8AC644000E29DA /* Trending */,
 				76F537CD2C8AC6B6000E29DA /* Search */,
@@ -109,7 +140,8 @@
 		76F537CD2C8AC6B6000E29DA /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				76F537CE2C8AC6C1000E29DA /* SearchView.swift */,
+				7612FA682C8BF7B30025BEF8 /* Model */,
+				7612FA692C8BF7BA0025BEF8 /* View */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -144,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				76F537D82C8AD66B000E29DA /* TrendingModel.swift */,
+				7612FA662C8BF0C20025BEF8 /* SearchModel.swift */,
 			);
 			path = ResponseModel;
 			sourceTree = "<group>";
@@ -247,11 +280,14 @@
 				76F537E52C8AE25A000E29DA /* CoinModel.swift in Sources */,
 				76F537E12C8AD84F000E29DA /* APIManager.swift in Sources */,
 				76F537CF2C8AC6C1000E29DA /* SearchView.swift in Sources */,
+				7612FA6E2C8BFA050025BEF8 /* TextWithColoredSubstring.swift in Sources */,
+				7612FA672C8BF0C20025BEF8 /* SearchModel.swift in Sources */,
 				76F537CC2C8AC653000E29DA /* TrendingView.swift in Sources */,
 				76F537BD2C8AC54E000E29DA /* ContentView.swift in Sources */,
 				76F537E82C8AE26A000E29DA /* NFTModel.swift in Sources */,
 				76F537D22C8AC6CF000E29DA /* FavoriteView.swift in Sources */,
 				76F537D52C8AC6E1000E29DA /* ProfileView.swift in Sources */,
+				7612FA6B2C8BF7CE0025BEF8 /* SearchCoinModel.swift in Sources */,
 				76F537D92C8AD66B000E29DA /* TrendingModel.swift in Sources */,
 				76F537E32C8AD891000E29DA /* APIKey.swift in Sources */,
 				76F537BB2C8AC54E000E29DA /* CheckCoinApp.swift in Sources */,
